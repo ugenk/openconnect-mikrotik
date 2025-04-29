@@ -19,5 +19,5 @@ RUN chmod +x /root/connect.sh
 HEALTHCHECK --start-period=15s --retries=1 \
   CMD pgrep openconnect || exit 1; pgrep dnsmasq || exit 1
 
-CMD ["sh" , "-c", "sh /root/connect.sh -D && ip addr && sh && tail -f /dev/null"]
+CMD ["sh" , "-c", "sh /root/connect.sh -D && ip addr && tail -f /dev/null"]
 
